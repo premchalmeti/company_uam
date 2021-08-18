@@ -1,0 +1,30 @@
+authentication:
+    {
+        'credentials': {
+            'username': <b64encoded>,
+            'pwd': <b64encoded>
+        }
+    }
+
+    session based:
+        - session affinity/sticky session issues while scaling
+
+    token based:
+        - jwt
+        - oauth 2 [access, refresh]
+            - How does Software A give Software B access to User X's data without Software B having access to User X's login credentials.
+
+        cookie store:
+        - httponly, secure in cookie
+        - in-mem, browser storage(local/session), cookie
+
+
+https://www.reddit.com/r/django/comments/oyln54/django_and_vuejs_integration
+
+CompanyPermission.objects.filter(
+    Q(companyrole__employee=prem)
+    |Q(companygroup__employee=prem)
+).values_list('name', flat=True)
+
+https://redwerk.com/blog/top-8-mistakes-when-working-with-django-orm/
+https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html

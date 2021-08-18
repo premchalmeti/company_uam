@@ -1,0 +1,7 @@
+field level permission
+    - validate role assigned is from same company
+    - validate group assigned is from same group
+
+- setup db routers, multiple databases
+- translations, i18n, localization
+- 
